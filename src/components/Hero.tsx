@@ -9,6 +9,7 @@ export default function Hero() {
   const [current, setCurrent] = useState(1);
   const [next, setNext] = useState<number | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -39,12 +40,12 @@ export default function Hero() {
           transition={{ opacity: { duration: TRANSITION_DURATION, ease: "easeInOut" } }}
           className="absolute w-full h-full object-cover"
         >
-          <source src={`/videos/hero${current}.mp4`} type="video/mp4" />
+          <source src={`https://guswebappstorage.blob.core.windows.net/resume-portfolio/hero${current}.mp4`} type="video/mp4" />
         </motion.video>
         {next && (
           <motion.video
             key={next}
-            autoPlay
+            autoPlay 
             muted
             loop
             playsInline
@@ -53,7 +54,7 @@ export default function Hero() {
             transition={{ opacity: { duration: TRANSITION_DURATION, ease: "easeInOut" } }}
             className="absolute w-full h-full object-cover"
           >
-            <source src={`/videos/hero${next}.mp4`} type="video/mp4" />
+            <source src={`https://guswebappstorage.blob.core.windows.net/resume-portfolio/hero${next}.mp4`} type="video/mp4" />
           </motion.video>
         )}
       </div>

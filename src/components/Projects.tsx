@@ -13,7 +13,8 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="max-w-6xl mx-auto px-6 py-20">
+    <section id="projects" className="max-w-6xl mx-auto px-6 py-20 flex flex-col items-center gap-10">
+      <div className="intro__separator-top"></div>
       <h2 className="text-3xl font-bold text-primary mb-8">Showcase Projects</h2>
       <div className="grid md:grid-cols-2 gap-8">
         {projects.map((proj, i) => (
@@ -41,6 +42,7 @@ export default function Projects() {
           </div>
         ))}
       </div>
+      <div className="intro__separator-bottom"></div>
     </section>
   );
 }

@@ -39,7 +39,9 @@ export default function Contact() {
         />
         <button
           type="submit"
-          className="px-6 py-3 bg-black cyan-text glitch text-dark font-bold rounded-lg shadow-lg hover:opacity-90 cursor-pointer"
+          className="px-6 py-3 bg-black/80 text-pink-500 glitch text-dark font-bold hover:opacity-90 cursor-pointer"
+          style={{ clipPath: "polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px)" }}
+
         >
           Send
         </button>

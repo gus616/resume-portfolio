@@ -9,7 +9,8 @@ const techStack = [
 
 export default function TechStack() {
   return (
-    <section id="tech" className="max-w-6xl mx-auto px-6 py-12">
+    <section id="tech" className="max-w-6xl mx-auto px-6 py-12 flex flex-col items-center">
+      <div className="intro__separator-top"></div>
       <h2 className="text-3xl font-bold text-primary mb-6 text-center">Tech Stack</h2>
       <div className="flex flex-wrap justify-center gap-6">
         {techStack.map((tech, i) => (
@@ -22,6 +23,7 @@ export default function TechStack() {
           </div>
         ))}
       </div>
+      <div className="intro__separator-bottom"></div>
     </section>
   );
 }

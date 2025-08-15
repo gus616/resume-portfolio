@@ -11,11 +11,11 @@ import { useState } from "react";
 export default function Home() {
   const [cyberMode, setCyberMode] = useState(false);
   return (
-    <main className={cyberMode ? "neon-glow" : ""}>
+    <main>
       <Navbar cyberMode={cyberMode} setCyberMode={setCyberMode} />
       <Hero />
-      <About />
       <TechStack />
+      <About />
       <Projects />
       <Companies />
       <Contact />
