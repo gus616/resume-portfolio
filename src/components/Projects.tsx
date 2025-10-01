@@ -1,14 +1,40 @@
 import { desc, image } from "framer-motion/client";
 
 const projects = [
-  {title: "Amazon Clone",
+  {
+    title: "Amazon Clone",
     description: "Full-stack e-commerce app with React, Rtk Query, Redux, .Net Core API, Azure deployment.",
-    stack: [".Net Core 9","React", "TypeScript","Tailwind", "Azure" ],
+    stack: [".Net Core 9", "React", "TypeScript", "Tailwind", "Azure"],
     image: "/projects/amazon.jpg",
     githubFrontEnd: "https://github.com/gus616/restore-ecommerce-frontend",
     githubBackEnd: "https://github.com/gus616/restore-ecommerce-api",
     demo: "https://nice-ocean-0db720610.1.azurestaticapps.net/"
   },
+  {
+    title: "Disney Clone",
+    description: "Disney+ cloneh React 19, TypeScript, Vite, .NET Core, Azure SQL and Tailwind CSS ",
+    stack: ["React", "RTK Query", "Azure SQL", "Tailwind", ".NET Core 9", "Vite", "TypeScript", "Azure Blob storage", "Azure Web Apps", "Azure Static Web Apps"],
+    image: "/projects/disneyclonethumbnail.jpg",
+    githubFrontEnd: "https://github.com/gus616/disntney-plus-frontend",
+    githubBackEnd: "https://github.com/gus616/disntey-plus-backend",
+    demo: "https://kind-mushroom-01200b30f.2.azurestaticapps.net/"
+  },
+  {
+    title: "Gif Expert App",
+    description: "A React app to search and display GIFs using the Giphy API. With unit tests using Jest and React Testing Library.",
+    stack: ["React", "TypeScript", "Tailwind", "Giphy API"],
+    image: "/projects/gifexpert.jpg",
+    githubFrontEnd: "https://github.com/gus616/giffexpertapp/tree/master",
+    githubBackEnd: "",
+    demo: "https://gif-expert-by-gus.netlify.app/"
+  },
+  {
+    title: "Github Finder",
+    description: "A React app to search GitHub profiles and view details. Built with React, TypeScript, Tailwind CSS, and GitHub API.",
+    stack: ["React", "Third Party API", "Jest", "React Testing Library"],
+    image: "/projects/githubfinder.jpg",
+    demo: "https://githubfinder667.netlify.app/"
+  }
 ];
 
 export default function Projects() {
@@ -19,8 +45,6 @@ export default function Projects() {
       <div className="grid md:grid-cols-2 gap-8">
         {projects.map((proj, i) => (
           <div key={i} className="bg-dark border border-primary rounded-lg overflow-hidden shadow-lg cursor-pointer hover:border-pink-500 hover:border-4 transition-transform transform hover:scale-105"
-          
-          onClick={() => window.open(proj.demo, "_blank")}
           >
             <img src={proj.image} alt={proj.title} className="w-full h-48 object-fill" />
             <div className="p-4">
@@ -34,9 +58,9 @@ export default function Projects() {
                 ))}
               </div>
               <div className="flex gap-4">
-                <a href={proj.githubFrontEnd} target="_blank" className="text-secondary hover:underline">Front End Repo</a>
-                <a href={proj.githubBackEnd}  target="_blank" className="text-secondary hover:underline">API Repo</a>
-                <a href={proj.demo}  target="_blank" className="text-primary hover:underline">Live Demo</a>
+                {proj.githubFrontEnd && <a href={proj.githubFrontEnd} target="_blank" className="text-secondary hover:underline">Front End Repo</a>}
+                {proj.githubBackEnd && <a href={proj.githubBackEnd} target="_blank" className="text-secondary hover:underline">API Repo</a>}
+                {proj.demo && <a href={proj.demo} target="_blank" className="text-primary hover:underline">Live Demo</a>}
               </div>
             </div>
           </div>

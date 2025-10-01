@@ -66,10 +66,10 @@ export default function Hero() {
           alt="Profile"
           className="w-40 h-40 rounded-full border-4 border-primary border-[#0ff0fc] object-cover"
         />
-        <h1 className="text-4xl md:text-4xl break-words glitch-pink text-pink-600">
-          Gustavo Velazquez — Software Engineer
+        <h1 className="text-4xl md:text-4xl break-words glitch-pink text-white">
+          Gus Velazquez — Software Engineer
         </h1>
-        <p className="mt-4 text-lg max-w-xl neon-text cyan-text">
+        <p className="mt-4 text-lg max-w-xl neon-text text-white">
           Building scalable apps and pixel-perfect UIs with React, C#, Next Js, and Azure.
         </p>
       </div>

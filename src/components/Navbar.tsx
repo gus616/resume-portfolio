@@ -13,6 +13,8 @@ export default function Navbar({ cyberMode, setCyberMode }: NavbarProps) {
         { name: "Stack", href: "#tech" },
         { name: "Projects", href: "#projects" },
         { name: "Companies", href: "#companies" },
+        { name: "GitHub", href: "#github" },
+        { name: "Education", href: "#education" },
         { name: "Contact", href: "#contact" },
     ];
 
